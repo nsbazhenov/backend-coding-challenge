@@ -41,7 +41,7 @@ public class ParseTsvFile {
     private static final int COUNTRY_COLUMN = 8;
     private static final int ADMIN_CODE_COLUMN = 10;
 
-    private static final String absolutPathInTsvFile = "C:\\Users\\nikel\\IdeaProjects\\backend-coding-challenge\\data\\cities_canada-usa.tsv";
+    private static final String pathInTsvFile = "src/main/resources/cities_canada-usa.tsv";
 
 
     /**
@@ -62,7 +62,7 @@ public class ParseTsvFile {
         LOGGER.info("Start parsing an .tsv file");
         List<City> cities = new ArrayList<>();
 
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(absolutPathInTsvFile))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(pathInTsvFile))) {
             bufferedReader.readLine();
 
             String line = bufferedReader.readLine();
